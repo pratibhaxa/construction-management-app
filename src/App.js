@@ -10,7 +10,8 @@ function App() {
         <React.Fragment>
             <DocketTab />
             <Routes>
-                {/* <Route path="" Component={Docket} /> */}
+                <Route path="/" element = {<CreateDocket />}></Route>
+                {/* <Route path="/" Component={CreateDocket} /> */}
                 <Route path="/create-docket" Component={CreateDocket} />
                 <Route path="/view-dockets" Component={ViewDocket} />
                 {/* <Route path="/docket-tab" Component={DocketTab} /> */}
