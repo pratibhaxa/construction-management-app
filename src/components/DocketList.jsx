@@ -2,10 +2,6 @@ import { Chip, TableCell, TableRow } from "@mui/material"
 import React from "react"
 
 export const DocketList = (props) => {
-    const descriptions = props.docket.Records.map((record) => record.description).join(', ');
-
-    console.log(descriptions);
-
     return (
         <React.Fragment>
             <TableRow hover role='checkbox'>

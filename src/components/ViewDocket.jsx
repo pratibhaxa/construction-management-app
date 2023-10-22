@@ -44,7 +44,7 @@ export const ViewDocket = () => {
                             {
                                 docketList.map((docket) => {
                                     return (
-                                        <DocketList docket = {docket} />
+                                        <DocketList key={docket.id} docket = {docket} />
                                     )
                                 })
                             }

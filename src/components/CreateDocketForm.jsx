@@ -70,19 +70,12 @@ export const CreateDocketForm = () => {
             PurchaseOrder: purchaseOrder,
         };
 
-        // Filter the records based on the selected purchase order
         const selectedRecords = data.filter((record) => record.PONumber === purchaseOrder);
-
-        // Populate the docketData with selected records
         docketData.Records = selectedRecords;
 
-        // Now, you have the complete docketData object with selected records
-        console.log(docketData);
-
-        // Add this object to your Firebase Firestore collection or perform other actions as needed
         try {
             const docRef = await addDoc(collection(db, "dockets"), docketData);
-            console.log("Document written with ID: ", docRef.id);
+            // console.log("Document written with ID: ", docRef.id);
             // setIsAlertOpen(true); // Show the success alert
             // setIsDialogOpen(true); // Open the dialog
             setIsSuccessAlertOpen(true);
@@ -107,13 +100,13 @@ export const CreateDocketForm = () => {
         // console.log(selectedPurchaseOrder, 'selectedPurchaseOrder');
     }
 
-    useEffect(() => {
-        console.log(supplierName, 'supplierName');
-    }, [supplierName]);
+    // useEffect(() => {
+    //     console.log(supplierName, 'supplierName');
+    // }, [supplierName]);
     
-    useEffect(() => {
-        console.log(purchaseOrder, 'purchaseOrder');
-    }, [purchaseOrder]);
+    // useEffect(() => {
+    //     console.log(purchaseOrder, 'purchaseOrder');
+    // }, [purchaseOrder]);
 
     return (
         <React.Fragment>
